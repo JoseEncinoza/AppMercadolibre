@@ -1,0 +1,38 @@
+<div class="container" style="text-align: right;">
+   	<h5>Autor</h5>
+	<p>nombre: {{author.name}} Apellido: {{author.lastname}}</p>
+</div>
+<h5>Categorias</h5>
+<ul class="caja2">
+{{#each categories}}
+<li class="categorias">{{this}}</li>
+{{/each}}
+</ul>
+
+<div class="grid" >
+	<div class="row">
+	{{#each items}}
+
+    <div class="col s12 m3 l3">
+	<div class="card">
+            <div class="card-image">
+              <img src="{{this.picture}}">
+              <span class="card-title text-negro">{{this.title}}</span>
+            </div>
+            <div class="card-content">
+             <p>id: {{this.id}}</p>
+             <p>precio: {{this.price.currency}} {{this.price.amount}}</p>
+             <p>decimals: {{this.price.decimals}}</p>
+             <p>Condicion: {{this.condition}}</p>
+             <p>free shipping: {{this.free_shipping}}</p>
+            </div>
+            <div class="card-action">
+              <a href="/items/{{this.id}}">Ver Detalle</a>
+            </div>
+          </div>
+    </div>
+
+
+{{/each}}
+</div>
+</div>

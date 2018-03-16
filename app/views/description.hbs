@@ -1,0 +1,29 @@
+<div class="container" style="text-align: right;">
+   	<h5>Autor</h5>
+	<p>nombre: {{author.name}} Apellido: {{author.lastname}}</p>
+</div>
+<div class="container">
+	<div class="caja2">
+	<div class="row">
+		<div class="col s12 m6 l6">
+			<a href="{{item.picture}}"><img src="{{item.picture}}">
+</a>
+			<h5>{{item.id}}</h5>
+			<h5>{{item.title}}</h5>
+		</div>
+		<div class="col s12 m6 l6">
+			<h5>Descripcion</h5>
+			<p>{{item.description}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 m6 l6">
+			 <h5>precio: {{item.price.currency}} {{item.price.amount}}</h5>
+             <h5>decimals: {{item.price.decimals}}</h5>
+             <h5>Condicion: {{item.condition}}</h5>
+             <h5>free shipping: {{item.free_shipping}}</h5>
+             <h5>sold quantity: {{item.sold_quantity}}</h5>
+		</div>
+	</div>
+	</div>
+</div>
